@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="icon" href="brain.png">
     <title>CerebroPro</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,7 +11,6 @@
   </head>
 
   <body class="bg-light">
-
     <div class="container">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="brain.png" alt="" width="72" height="72">
@@ -20,22 +19,68 @@
       </div>
 
       <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
+        <div class="col-md-12 order-md-2 mb-4">
           <ul class="list-group mb-3">
             <hr class="mb-4">
-
-            <h4 class="mb-3">Do you like this UI?</h4>
-
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input id="y" name="q1" type="radio" class="custom-control-input" checked="" required="">
-                <label class="custom-control-label" for="y">Yes</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="n" name="q1" type="radio" class="custom-control-input" required="">
-                <label class="custom-control-label" for="n">No</label>
+            <div class="question" id="q1">
+              <h4 class="mb-3">Have you ever had nightmares about an experience over the past couple moths or thoughts about this experience when you did not want to?</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="y" name="q1" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="y">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="n" name="q1" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="n">No</label>
+                </div>
               </div>
             </div>
+
+            <hr class="mb-4">
+            <div class="question" id="q2">
+              <h4 class="mb-3">During the past month, have you ever tried hard not to think about something or went out of your way to avoid situations that reminded you of this thing?</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="y" name="q1" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="y">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="n" name="q1" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="n">No</label>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <div class="question" id="q3">
+              <h4 class="mb-3">In the past month, have you ever been constantly on guard, watchful, or easily started?</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="y" name="q1" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="y">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="n" name="q1" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="n">No</label>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+            <div class="question" id="q4">
+              <h4 class="mb-3">Have you ever felt numb or detached from others, activities, or your surroundings?</h4>
+              <div class="d-block my-3">
+                <div class="custom-control custom-radio">
+                  <input id="y" name="q1" type="radio" class="custom-control-input" checked="" required="">
+                  <label class="custom-control-label" for="y">Yes</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input id="n" name="q1" type="radio" class="custom-control-input" required="">
+                  <label class="custom-control-label" for="n">No</label>
+                </div>
+              </div>
+            </div>
+
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Finish</button>
           </form>
@@ -43,7 +88,7 @@
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© CerebroPro</p>
+        <p class="mb-1">© Ethan Goodhart</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
@@ -52,9 +97,6 @@
       </footer>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../assets/js/vendor/popper.min.js"></script>
@@ -66,10 +108,8 @@
         'use strict';
 
         window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
           var forms = document.getElementsByClassName('needs-validation');
 
-          // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
               if (form.checkValidity() === false) {
@@ -82,6 +122,5 @@
         }, false);
       })();
     </script>
-  
-
-</body></html>
+</body>
+</html>
