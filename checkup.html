@@ -38,7 +38,7 @@
 
             <hr class="mb-4">
             <div class="question" id="q2">
-              <h4 class="mb-3">During the past month, have you ever tried hard not to think about something or went out of your way to avoid situations that reminded you of this thing?</h4>
+              <h4 class="mb-3">During the past month, have there been any instances where you have tried hard not to think about something or went out of your way to avoid situations that reminded you of this thing?</h4>
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
                     <input type="radio" name="q2" class="custom-control-input" id="q2o1">
@@ -53,7 +53,7 @@
 
             <hr class="mb-4">
             <div class="question" id="q3">
-              <h4 class="mb-3">In the past month, have you ever been constantly on guard, watchful, or easily started?</h4>
+              <h4 class="mb-3">At any time over the past month, have you been constantly on guard, watchful, or easily startled?</h4>
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
                     <input type="radio" name="q3" class="custom-control-input" id="q3o1">
@@ -68,7 +68,7 @@
 
             <hr class="mb-4">
             <div class="question" id="q4">
-              <h4 class="mb-3">Have you ever felt numb or detached from others, activities, or your surroundings?</h4>
+              <h4 class="mb-3">Have you recently felt numb or detached from others, activities, or your surroundings?</h4>
               <div class="d-block my-3">
                 <div class="custom-control custom-radio">
                     <input type="radio" name="q4" class="custom-control-input" id="q4o1">
@@ -82,13 +82,13 @@
             </div>
 
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Finish</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="submitForm()">Finish</button>
           </form>
         </div>
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© Ethan Goodhart</p>
+        <p class="mb-1">© CerebroPro</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
@@ -97,30 +97,54 @@
       </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
     <script>
-      // disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyD0FWk0tupLs7i9e7ZqO3JBbYvY9SdBkpA",
+        authDomain: "cerebropro-90234.firebaseapp.com",
+        databaseURL: "https://cerebropro-90234.firebaseio.com",
+        projectId: "cerebropro-90234",
+        storageBucket: "cerebropro-90234.appspot.com",
+        messagingSenderId: "334690706998",
+        appId: "1:334690706998:web:5d09e975bc82277d7ada97",
+        measurementId: "G-ZFYM765KJX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script> -->
 
-        window.addEventListener('load', function() {
-          var forms = document.getElementsByClassName('needs-validation');
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script>
+      function submitForm() {
+        var c = 0;
+        for (var i = 0; i < document.getElementsByTagName("input").length; i++) {
+          if (document.getElementsByTagName("input")[i].checked) { c+=1 }
+        }
 
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
+        if (c == 4) {
+          document.getElementsByClassName('py-5 text-center')[0].remove();
+          $(".row").replaceWith("<br><br><br><br><h1 style='text-align: center;'>Success!</h1>");
+        }
+      }
+
+      function answersAsString() {
+        var answers = "";
+        var j = 0;
+
+        for (var i = 0; i < $("h4.mb-3").length; i++) {
+          answers += $("h4.mb-3")[i].innerHTML + "\n" + ((document.getElementsByTagName("input")[j].checked) ? "Yes" : "No") + "\n\n";
+          j += 2;
+        }
+
+        return answers.trim();
+      }
     </script>
 </body>
 </html>

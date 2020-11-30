@@ -1,0 +1,157 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="brain.png">
+    <title>CerebroPro</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="form-validation.css" rel="stylesheet">
+    <style type="text/css">
+      span {
+        width: 80px !important;
+        color: white !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="brain.png" alt="" width="72" height="72">
+        <h2>Administrative View</h2>
+        <p class="lead">Below is the status of all your students</p>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>575648</td>
+            <td>Marshall</td>
+            <td>Peterman</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr>
+          <tr>
+            <td>682869</td>
+            <td>Don</td>
+            <td>Brown</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr>
+          <tr>
+            <td>461582</td>
+            <td>Lilly</td>
+            <td>Smith</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr>
+          <tr>
+            <td>986451</td>
+            <td>Adam</td>
+            <td>Yaweh</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr><tr>
+            <td>342685</td>
+            <td>Jonathan</td>
+            <td>Kent</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr><tr>
+            <td>779856</td>
+            <td>Sarah</td>
+            <td>Silverman</td>
+            <td><span class="badge badge-warning badge-pill">Incomplete</span></td>
+          </tr><tr>
+            <td>124446</td>
+            <td>John</td>
+            <td>Quentin</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr><tr>
+            <td>669985</td>
+            <td>Jake</td>
+            <td>Jefferson</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr>
+          <tr>
+            <td>423562</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><span class="badge badge-warning badge-pill">Incomplete</span></td>
+          </tr>
+          <tr>
+            <td>848656</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td><span class="badge badge-danger badge-pill">Failed</span></td>
+          </tr>
+          <tr>
+            <td>487669</td>
+            <td>Larry</td>
+            <td>Collins</td>
+            <td><span class="badge badge-success badge-pill">Passed</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© CerebroPro</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyD0FWk0tupLs7i9e7ZqO3JBbYvY9SdBkpA",
+        authDomain: "cerebropro-90234.firebaseapp.com",
+        databaseURL: "https://cerebropro-90234.firebaseio.com",
+        projectId: "cerebropro-90234",
+        storageBucket: "cerebropro-90234.appspot.com",
+        messagingSenderId: "334690706998",
+        appId: "1:334690706998:web:5d09e975bc82277d7ada97",
+        measurementId: "G-ZFYM765KJX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script>
+      // disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          var forms = document.getElementsByClassName('needs-validation');
+
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+</body>
+</html>

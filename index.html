@@ -8,6 +8,7 @@
     <title>CerebroPro</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<link rel="icon" href="brain.png">
 	<meta name="theme-color" content="#563d7c">
     <style>
@@ -29,7 +30,7 @@
     <link href="floating-labels.css" rel="stylesheet">
   </head>
 <body>
-	<form class="form-signin" action="checkup.html">
+	<form class="form-signin">
 		<div class="text-center mb-4">
 			<img class="mb-4" src="brain.png" alt="" width="72" height="72">
 			<h1 class="h3 mb-3 font-weight-normal">CerebroPro</h1>
@@ -51,7 +52,19 @@
 		</div>
 		
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-		<p class="mt-5 mb-3 text-muted text-center">© Ethan Goodhart</p>
+		<p class="mt-5 mb-3 text-muted text-center">© CerebroPro</p>
 	</form>
+
+	<script type="text/javascript">
+		$("form").on('submit', function(e) {
+			if ($("#inputEmail")[0].value == "teacher@gmail.com") {
+				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'admin.html';
+			} else if ($("#inputEmail")[0].value == "student@gmail.com") {
+				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'checkup.html';
+		   	}
+
+			e.preventDefault();
+		});
+	</script>
 </body>
 </html>
