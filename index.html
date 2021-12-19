@@ -57,9 +57,9 @@
 
 	<script type="text/javascript">
 		$("form").on('submit', function(e) {
-			if ($("#inputEmail")[0].value == "teacher@gmail.com") {
+			if ($("#inputEmail")[0].value == "teacher@gmail.com" && ("#inputPassword")[0].value == "Teacher123") {
 				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'admin.html';
-			} else if ($("#inputEmail")[0].value == "student@gmail.com") {
+			} else if ($("#inputEmail")[0].value == "student@gmail.com" && ("#inputPassword")[0].value == "Student123") {
 				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'checkup.html';
 		   	}
 
