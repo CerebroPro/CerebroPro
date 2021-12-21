@@ -58,14 +58,12 @@
 
     <script type="text/javascript">
         $("form").on('submit', function(e) {
-            if ($("#inputEmail")[0].value == "eric.hedinger@providenceday.org" && $("#inputPassword")[0].value == "123") {
-                window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'admin.html';
-            } else if ($("#inputEmail")[0].value == "diego.keller@providenceday.org" && $("#inputPassword")[0].value == "MB5#?eSQ") {
-                window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'checkup.html';
-            }
-
-            e.preventDefault();
-        });
+                    if ($("#inputEmail")[0].value == "eric.hedinger@providenceday.org" && $("#inputPassword")[0].value == "123") {
+                        window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'admin.html';
+                    } else if ($("#inputEmail")[0].value == "diego.keller@providenceday.org" && $("#inputPassword")[0].value == "MB5#?eSQ") {
+                        window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'checkup.html';
+                        e.preventDefault();
+                    });
     </script>
 </body>
 
