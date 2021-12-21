@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,63 +8,65 @@
     <meta name="author" content="Ethan Goodhart & Diego Keller">
     <title>CerebroPro</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="icon" href="brain.png">
-	<meta name="theme-color" content="#563d7c">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="brain.png">
+    <meta name="theme-color" content="#563d7c">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-      }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
     </style>
     <link href="floating-labels.css" rel="stylesheet">
-  </head>
+</head>
+
 <body>
-	<form class="form-signin">
-		<div class="text-center mb-4">
-			<img class="mb-4" src="brain.png" alt="" width="72" height="72">
-			<h1 class="h3 mb-3 font-weight-normal">CerebroPro</h1>
-			<p>Simple mental health checkups for universities and medical institutions</p>
-		</div>
+    <form class="form-signin">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="brain.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">CerebroPro</h1>
+            <p>Simple mental health checkups for universities and medical institutions</p>
+        </div>
 
-		<div class="form-label-group">
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-			<label for="inputEmail">Email address</label>
-		</div>
+        <div class="form-label-group">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <label for="inputEmail">Email address</label>
+        </div>
 
-		<div class="form-label-group">
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-			<label for="inputPassword">Password</label>
-		</div>
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <label for="inputPassword">Password</label>
+        </div>
 
-		<div class="checkbox mb-3">
-			<label><input type="checkbox" value="remember-me"> Remember me</label>
-		</div>
-		
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-		<p class="mt-5 mb-3 text-muted text-center">© Diego Keller & Ethan Goodhart</p>
-	</form>
+        <div class="checkbox mb-3">
+            <label><input type="checkbox" value="remember-me"> Remember me</label>
+        </div>
 
-	<script type="text/javascript">
-		$("form").on('submit', function(e) {
-			if ($("#inputEmail")[0].value == "teacher@gmail.com" && $("#inputPassword")[0].value == "Teacher123") {
-				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'admin.html';
-			} else if ($("#inputEmail")[0].value == "student@gmail.com" && $("#inputPassword")[0].value == "Student123") {
-				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'checkup.html';
-		   	}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted text-center">© Diego Keller & Ethan Goodhart</p>
+    </form>
 
-			e.preventDefault();
-		});
-	</script>
+    <script type="text/javascript">
+        $("form").on('submit', function(e) {
+            if ($("#inputEmail")[0].value == "eric.hedinger@providenceday.org" && $("#inputPassword")[0].value == "123") {
+                window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'admin.html';
+            } else if ($("#inputEmail")[0].value == "diego.keller@providenceday.org" && $("#inputPassword")[0].value == "MB5#?eSQ") {
+                window.location.href = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'checkup.html';
+            }
+
+            e.preventDefault();
+        });
+    </script>
 </body>
+
 </html>
