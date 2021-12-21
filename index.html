@@ -8,7 +8,6 @@
     <title>CerebroPro</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<link rel="icon" href="brain.png">
 	<meta name="theme-color" content="#563d7c">
     <style>
@@ -57,9 +56,9 @@
 
 	<script type="text/javascript">
 		$("form").on('submit', function(e) {
-			if ($("#inputEmail")[0].value == "teacher@gmail.com" && ("#inputPassword")[0].value == "Teacher123") {
+			if ($("#inputEmail")[0].value == "teacher@gmail.com" && $("#inputPassword")[0].value == "Teacher123") {
 				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'admin.html';
-			} else if ($("#inputEmail")[0].value == "student@gmail.com" && ("#inputPassword")[0].value == "Student123") {
+			} else if ($("#inputEmail")[0].value == "student@gmail.com" && $("#inputPassword")[0].value == "Student123") {
 				window.location.href = window.location.pathname.substring( 0, window.location.pathname.lastIndexOf( '/' ) + 1 ) + 'checkup.html';
 		   	}
 
